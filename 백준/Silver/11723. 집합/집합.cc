@@ -25,7 +25,7 @@ int read(int s, string str){
     else if(str=="toggle"){
         cin >> x;
         if(s & (1 << x)){
-             s -= (1 << x);
+             s &= ~(1 << x);
         }
         else  s |= (1 << x);
     }
